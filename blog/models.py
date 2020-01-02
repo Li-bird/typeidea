@@ -70,7 +70,7 @@ class Post(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = "文章"
-        ordering = ['-id'] #根据id进行降序排序
+        ordering = ['-id'] #根据id进行降序排列
 
     def __str__(self):
         return self.title
