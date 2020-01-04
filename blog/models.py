@@ -93,6 +93,13 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    pv = models.PositiveIntegerField(default=1)
+    uv = models.PositiveIntegerField(default=1)
+
+    @classmethod
+    def hot_posts(cls):
+        return cls.objects.filter(status=cls.STATUS_NORMAL).order_by('-pv')
+
     @staticmethod
     def get_by_tag(tag_id):
         try:

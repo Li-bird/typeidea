@@ -5,15 +5,10 @@
     <title>typeidea博客系统</title>
 </head>
 <body>
-<div>顶部分类：
-    {% for cate in navs %}
-    <a href="/category/{{ cate.id }}/">{{ cate.name }}</a>
-    {% endfor %}
-</div>
-<hr/>
+{% extends "./base.html" %}
+{% block title %} {{ post.title }} {% endblock %}
 
-    <h1>detail</h1>
-    {{ name }}
+{% block main %}
     {% if post %}
     <h1>{{ post.title }}</h1>
         <div>
@@ -25,12 +20,6 @@
         {{ post.content }}
         </p>
     {% endif %}
-
-<hr/>
-<div>底部分类:
-    {% for cate in categories %}
-    <a href="/category/{{ cate.id }}/">{{ cate.name }}</a>
-    {% endfor %}
-</div>
+{% endblock %}
 </body>
 </html>
