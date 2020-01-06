@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>typeidea博客系统</title>
-</head>
-<body>
-{% extends "./base.html" %}
+{% extends "blog/base.html" %}
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block main %}
@@ -21,5 +14,3 @@
         </p>
     {% endif %}
 {% endblock %}
-</body>
-</html>

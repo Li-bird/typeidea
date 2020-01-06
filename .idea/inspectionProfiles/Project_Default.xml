@@ -6,6 +6,7 @@
         <list>
           <option value="blog.adminforms.forms" />
           <option value="typeidea.base_admin.admin" />
+          <option value="object.get_context_data" />
         </list>
       </option>
     </inspection_tool>
