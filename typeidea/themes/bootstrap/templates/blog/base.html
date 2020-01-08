@@ -10,6 +10,18 @@
         .post {
             margin-bottom: 5px;//配置每个post卡片下面的间隔
         }
+        .class1{
+            color: blueviolet;
+            background-color: #b1dfbb;
+
+        }
+        .class2{
+            color: #0b2e13;
+            {# color: darkslategrey; #}
+        }
+        .class3{
+            color: #721c24;
+        }
     </style>
 </head>
 <body>
@@ -31,18 +43,18 @@
             </form>
         </div>
     </nav>
-    <div class="jumbotron">
+    <div class="jumbotron class1">
         <h1 class="display-4">Typeidea</h1>
         <p class="lead">基于Django的多人博客系统</p>
     </div>
 </div>
 <div class="container main">
     <div class="row">
-        <div class="col-9 post-list">
+        <div class="col-9 post-list class2">
             {% block main %}
             {% endblock %}
         </div>
-        <div class="col-3">
+        <div class="col-3 class3">
             {% block sidebar %}
                 {% for sidebar in sidebars %}
                     <div class="card sidebar">
